@@ -1,0 +1,74 @@
+1 и 2.  Person (с методом introduce)
+Python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        print(f"Меня зовут {self.name}, мне {self.age} лет")
+
+# Создаем два объекта
+person1 = Person("Алексей", 25)
+person2 = Person("Мария", 30)
+
+# Выводим их атрибуты
+print(f"Объект 1: имя — {person1.name}, возраст — {person1.age}")
+print(f"Объект 2: имя — {person2.name}, возраст — {person2.age}")
+
+# Проверяем метод introduce
+person1.introduce()
+person2.introduce()
+
+3.
+Python
+class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def reading_time(self):
+        # 1 страница = 2 минуты
+        return self.pages * 2
+
+# Пример использования:
+my_book = Book("Мастер и Маргарита", "Михаил Булгаков", 400)
+print(f"Книга: {my_book.title}, Автор: {my_book.author}")
+print(f"Примерное время чтения: {my_book.reading_time()} минут")
+
+4. 
+Python
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def get_age(self, current_year):
+        return current_year - self.year
+
+# Пример использования:
+my_car = Car("Toyota", "Camry", 2018)
+current_year = 2026
+print(f"Автомобиль: {my_car.brand} {my_car.model}")
+print(f"Возраст автомобиля: {my_car.get_age(current_year)} лет")
+
+5.
+Python
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+
+# Пример использования:
+rect = Rectangle(5, 10)
+print(f"Ширина: {rect.width}, Высота: {rect.height}")
+print(f"Площадь прямоугольника: {rect.area()}")
+print(f"Периметр прямоугольника: {rect.perimeter()}")
